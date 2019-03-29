@@ -7,7 +7,7 @@ function getRandomInt(max) {
 
 function loadList(file) {
     return fs.readFileSync(file, 'utf8').split('\n').filter(function (el) {
-        return el != null;
+        return el != false;
     });
 }
 
