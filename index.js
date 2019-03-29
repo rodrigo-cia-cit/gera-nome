@@ -1,4 +1,5 @@
 const fs = require('fs');
+const os = require('os');
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
@@ -34,4 +35,9 @@ function getRandomCompositeName() {
     return candidate;
 }
 
-console.log(getRandomCompositeName());
+if (os.userInfo().username.toLowerCase() === 'gmoliveira') {
+    console.log('Lazy Coach');
+} else {
+    console.log(getRandomCompositeName());
+}
+
